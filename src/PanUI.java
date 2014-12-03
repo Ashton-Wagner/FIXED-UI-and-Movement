@@ -21,8 +21,8 @@ public class PanUI extends JPanel {
     Image imgTimeCount1;
     Image imgTimeCount2;
     Image imgTimeCount3;
-    int Time1 = 0;
-    int Time2 = 1;
+    int Time1 = 1;
+    int Time2 = 8;
     int Time3 = 0;
     Boolean bStopTimer = false;
     Boolean bTimeChanged1;
@@ -31,7 +31,6 @@ public class PanUI extends JPanel {
     Boolean BTimeReset = false;
     Boolean bLifeLost = false;
     int nLife = 3;
-    ////
     int nCoins1 = 0;
     int nCoins2 = 0;
     int nScore1 = 0;
@@ -49,12 +48,16 @@ public class PanUI extends JPanel {
         timer = new Timer(1000, updateImage);
         timer.start();
     }
-    public void ResetTime(Boolean _BTimeReset) {
-        BTimeReset = _BTimeReset;
+
+    public void ResetTime() {
+        BTimeReset = true;
+        bStopTimer = false;
     }
+
     public void LooseALife(Boolean _bLifeLost) {
         bLifeLost = _bLifeLost;
     }
+
     public void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         ////
@@ -86,7 +89,7 @@ public class PanUI extends JPanel {
                 bStopTimer = true;
                 timer.stop();
             }
-            if (bStopTimer !=true) {
+            if (bStopTimer != true) {
                 if (Time1 == 0 && Time3 == 0) {
                     bTimeChanged2 = true;
                 }
@@ -102,7 +105,7 @@ public class PanUI extends JPanel {
                 }
                 if (BTimeReset == true) {
                     Time1 = 1;
-                    Time2 = 2;
+                    Time2 = 8;
                     Time3 = 0;
                     BTimeReset = false;
                 }
