@@ -5,7 +5,6 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -39,7 +38,7 @@ public class PanUI extends JPanel {
 
     public PanUI() {
         setPreferredSize(new Dimension(1250, 75));
-        iBG = imgres.GetimgBG();
+        iBG = imgres.GetimgUIBG();
         ariNumbers = imgres.GetNumbers();
         imgTime = imgres.GetimgTime();
         imgScore = imgres.GetimgScore();

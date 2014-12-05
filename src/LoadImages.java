@@ -18,8 +18,10 @@ public class LoadImages {
     ImageIcon img7 = new ImageIcon("img7.png");
     ImageIcon img8 = new ImageIcon("img8.png");
     ImageIcon img9 = new ImageIcon("img9.png");
-    ImageIcon imgBG = new ImageIcon("Background.png");
-    Image iBG;
+    ImageIcon imgUIBG = new ImageIcon("UIBackground.png");
+    ImageIcon imgGBG = new ImageIcon("GameBackground.png");
+    Image iUIBG;
+    Image iGBG;
     Image ariNumbers[] = new Image[10];
     Image imgTime;
     Image imgScore;
@@ -43,7 +45,8 @@ public class LoadImages {
     ////
 
     public LoadImages() {
-        iBG = imgBG.getImage();
+        iUIBG = imgUIBG.getImage();
+        iGBG = imgGBG.getImage();
         ariNumbers[0] = img0.getImage();
         ariNumbers[1] = img1.getImage();
         ariNumbers[2] = img2.getImage();
@@ -71,8 +74,11 @@ public class LoadImages {
         ImgMovement[4][1] = il5.getImage();
     }
 
-    public Image GetimgBG() {
-        return iBG;
+    public Image GetimgUIBG() {
+        return iUIBG;
+    }
+    public Image GetimgGameBG() {
+        return iGBG;
     }
 
     public Image GetimgTime() {

@@ -10,11 +10,12 @@ public class FraMain extends JFrame {
         add(new PanMain());
 
         Toolkit tk = Toolkit.getDefaultToolkit();
-        int xSize = 1200;
+        int xSize = 1250;
         int ySize = 700;
         setSize(xSize, ySize);
         setTitle("insert name here");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 }
